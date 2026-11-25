@@ -462,7 +462,7 @@ DITA-OT (4.4 or later, on Java 17 or later) and invoke it directly:
 # From the DITA-OT plugin registry, once it lists the plugin
 dita install io.github.jyjeanne.dita2graph
 # Or from the ZIP of a GitHub release
-dita install https://github.com/jyjeanne/DITA2Graph/releases/download/v0.2.0/io.github.jyjeanne.dita2graph-0.2.0.zip
+dita install https://github.com/kamik2/DITA2Graph/releases/download/v0.3.0/io.github.jyjeanne.dita2graph-0.3.0.zip
 
 dita --input=path/to/root.ditamap --format=dita2graph --output=out
 ```
@@ -471,7 +471,9 @@ The plugin ZIP ships `dita2graph-core` for Linux (x86_64 and aarch64,
 glibc 2.28 or later), macOS (Intel and Apple silicon) and Windows
 (x86_64). On another platform, build it (`cargo build --release -p
 dita2graph-core`) and point `DITA2GRAPH_CORE_BIN` at it. The MCP server,
-`dita2graph-mcp`, is a separate download from the same release.
+`dita2graph-mcp`, is a separate download from the same release. Enable the
+offline HTML graph with `--args.dita2graph.viewer=true`; it writes
+`graph.html` in the output folder.
 Before 0.2.0 the plugin id was `org.dita.dita2graph`: uninstall it
 first (`dita uninstall org.dita.dita2graph`), since both declare the
 `dita2graph` transtype. `docs/tutorial.md` Part 2 walks through the rest, and

@@ -11,7 +11,7 @@
   the "vers" of this release's entry in the DITA-OT plugin registry
   (io.github.jyjeanne.dita2graph.json).
 -->
-<plugin id="io.github.jyjeanne.dita2graph" version="0.2.0">
+<plugin id="io.github.jyjeanne.dita2graph" version="0.3.0">
   <!-- The standard preprocessing pipeline (key-space resolution,
        conref/conkeyref resolution, DITAVAL filtering) this transtype
        hooks into after (section 2.2). -->

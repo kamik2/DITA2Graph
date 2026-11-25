@@ -6,11 +6,11 @@ members = [
 ]
 
 [workspace.package]
-version = "0.2.0"
+version = "0.3.0"
 edition = "2024"
 rust-version = "1.97"
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/jyjeanne/DITA2Graph"
+repository = "https://github.com/kamik2/DITA2Graph"
 
 [workspace.dependencies]
 anyhow = "1"

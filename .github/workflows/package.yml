@@ -245,8 +245,10 @@ jobs:
           dita="dita-ot-$DITA_OT_VERSION/bin/dita"
           if [ "$RUNNER_OS" = Windows ]; then dita="$dita.bat"; fi
           "$dita" --input=sample-docs/user-guide.ditamap --format=dita2graph --output=out \
-            --args.dita2graph.rdf=true --args.dita2graph.rdf.base=https://example.org/docs/
+            --args.dita2graph.rdf=true --args.dita2graph.rdf.base=https://example.org/docs/ --args.dita2graph.viewer=true
           test -f out/okf/topics/installing-product.md
           test -f out/graph.json
+          test -f out/graph.html
+          grep -q installing-product out/graph.html
           test -f out/rag/chunks.jsonl
           grep -q '<https://example.org/docs/map/user-guide>' out/rdf/graph.ttl
