@@ -10,6 +10,7 @@ name: Package
 #
 # release.yml calls it on a release tag and publishes what it built; on
 # main it checks that a change to the plugin or the core still packages.
+# The installation smoke test also verifies the offline HTML viewer.
 
 on:
   workflow_call:
